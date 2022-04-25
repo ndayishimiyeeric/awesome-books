@@ -21,6 +21,6 @@ const navBar = document.querySelector('nav');
 const navLinks = document.querySelectorAll('#nav-links li');
 
 export {
-    titleInput, authorInput, addBook, validationMessage, navList, navAddNew, navContact,
-    bookListSection, addNewSection, contactSection, dateTime, hamburgerMenu, navBar, navLinks
+  titleInput, authorInput, addBook, validationMessage, navList, navAddNew, navContact,
+  bookListSection, addNewSection, contactSection, dateTime, hamburgerMenu, navBar, navLinks,
 };

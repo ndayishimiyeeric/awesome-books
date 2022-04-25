@@ -1,4 +1,4 @@
-import {validationMessage} from './selectors.js';
+import { validationMessage } from './selectors.js';
 
 const clear = () => {
   validationMessage.innerHTML = '';

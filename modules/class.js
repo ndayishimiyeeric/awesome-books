@@ -13,7 +13,7 @@ export default class Books {
     removeBtn.forEach((btn, index) => {
       btn.addEventListener('click', () => {
         this.removeBook(index);
-      });    
+      });
     });
   }
 

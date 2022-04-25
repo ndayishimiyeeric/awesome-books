@@ -1,4 +1,4 @@
-import {hamburgerMenu, navBar} from './selectors.js';
+import { hamburgerMenu, navBar } from './selectors.js';
 
 export const toggleFunction = () => {
   hamburgerMenu.classList.toggle('active');

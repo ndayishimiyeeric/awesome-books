@@ -1,6 +1,6 @@
 import Books from './modules/class.js';
-import {addBook, navList, navContact, navAddNew, hamburgerMenu, navLinks, dateTime} from './modules/selectors.js';
-import addFunction from './modules/addbook.js';
+import { addBook, navList, navContact, navAddNew, hamburgerMenu, navLinks, dateTime, validationMessage, titleInput, authorInput } from './modules/selectors.js';
+import clear from './modules/clearmessage.js';
 import { navAddNewFunction, navListFunction, navContactFunction } from './modules/desktopnav.js';
 import { toggleFunction, removeFunction } from './modules/mobilenav.js';
 import { DateTime } from './modules/luxon.js';
@@ -8,7 +8,17 @@ import { DateTime } from './modules/luxon.js';
 const bookCollection = new Books();
 bookCollection.displayBooks();
 
-addBook.addEventListener('click', addFunction);
+addBook.addEventListener('click', (e) => {
+  e.preventDefault();
+  if (titleInput.value && authorInput.value) {
+    bookCollection.addBook(titleInput.value, authorInput.value);
+    validationMessage.innerHTML = 'Your book has been added successfully';
+    validationMessage.classList.add('active');
+    setTimeout(clear, 2000);
+    titleInput.value = '';
+    authorInput.value = '';
+  }
+});
 
 // Website Navigation
 navList.addEventListener('click', navListFunction);
