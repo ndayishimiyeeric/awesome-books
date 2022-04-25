@@ -1,19 +1,19 @@
-import * as selector from './selectors.js';
+import { bookListSection, addNewSection, contactSection } from './selectors.js';
 
 export const navAddNewFunction = () => {
-  selector.bookListSection.classList.remove('display-section');
-  selector.addNewSection.classList.add('display-section');
-  selector.contactSection.classList.remove('display-section');
-}
+  bookListSection.classList.remove('display-section');
+  addNewSection.classList.add('display-section');
+  contactSection.classList.remove('display-section');
+};
 
 export const navContactFunction = () => {
-  selector.bookListSection.classList.remove('display-section');
-  selector.addNewSection.classList.remove('display-section');
-  selector.contactSection.classList.add('display-section');
-}
+  bookListSection.classList.remove('display-section');
+  addNewSection.classList.remove('display-section');
+  contactSection.classList.add('display-section');
+};
 
 export const navListFunction = () => {
-  selector.bookListSection.classList.add('display-section');
-  selector.addNewSection.classList.remove('display-section');
-  selector.contactSection.classList.remove('display-section');
-}
+  bookListSection.classList.add('display-section');
+  addNewSection.classList.remove('display-section');
+  contactSection.classList.remove('display-section');
+};

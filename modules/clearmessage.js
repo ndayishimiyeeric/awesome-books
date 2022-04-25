@@ -1,6 +1,8 @@
-import * as selector from './selectors.js';
+import {validationMessage} from './selectors.js';
 
-export const clear = () => {
-  selector.validationMessage.innerHTML = '';
-  selector.validationMessage.classList.remove('active');
-}
+const clear = () => {
+  validationMessage.innerHTML = '';
+  validationMessage.classList.remove('active');
+};
+
+export default { clear };

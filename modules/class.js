@@ -2,17 +2,18 @@ export default class Books {
   constructor() {
     this.booksArray = JSON.parse(localStorage.getItem('books')) || [];
   }
+
   displayBooks() {
     const booksDiv = document.querySelector('.books');
     booksDiv.innerHTML = '';
-    this.booksArray.forEach((book, id) => {
+    this.booksArray.forEach((book) => {
       booksDiv.innerHTML += `<div class="book-container"><div class="book-info"><p class="display-title">" ${book.title.charAt(0).toUpperCase() + book.title.slice(1)} "</p><p>by</p><p class="display-author">${book.author.charAt(0).toUpperCase() + book.author.slice(1)}</p></div><button class="remove-btn">Remove</button></div>`;
     });
-    const removeBtn = document.querySelectorAll('.remove-btn')
+    const removeBtn = document.querySelectorAll('.remove-btn');
     removeBtn.forEach((btn, index) => {
-        btn.addEventListener('click', () => {
-          this.removeBook(index);
-        });    
+      btn.addEventListener('click', () => {
+        this.removeBook(index);
+      });    
     });
   }
 

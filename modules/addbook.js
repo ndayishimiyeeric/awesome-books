@@ -1,15 +1,17 @@
-import { bookCollection } from '../index.js';
-import * as selector from './selectors.js';
-import { clear } from './clearmessage.js';
+import bookCollection from '../index.js';
+import {titleInput, authorInput, validationMessage} from './selectors.js';
+import clear from './clearmessage.js';
 
-export const addFunction = (e) => {
+const addFunction = (e) => {
   e.preventDefault();
-    if (selector.titleInput.value && selector.authorInput.value) {
-      bookCollection.addBook(selector.titleInput.value, selector.authorInput.value);
-      selector.validationMessage.innerHTML = 'Your book has been added successfully';
-      selector.validationMessage.classList.add('active');
-      setTimeout(clear, 2000);
-      selector.titleInput.value = '';
-      selector.authorInput.value = '';
-    }
-}
+  if (titleInput.value && authorInput.value) {
+    bookCollection.addBook(titleInput.value, authorInput.value);
+    validationMessage.innerHTML = 'Your book has been added successfully';
+    validationMessage.classList.add('active');
+    setTimeout(clear, 2000);
+    titleInput.value = '';
+    authorInput.value = '';
+  }
+};
+
+export default { addFunction };

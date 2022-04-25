@@ -1,13 +1,13 @@
-import * as selector from './selectors.js';
+import {hamburgerMenu, navBar} from './selectors.js';
 
 export const toggleFunction = () => {
-  selector.hamburgerMenu.classList.toggle('active');
-  selector.navBar.classList.toggle('active');
-}
+  hamburgerMenu.classList.toggle('active');
+  navBar.classList.toggle('active');
+};
 
 export const removeFunction = (link) => {
   link.addEventListener('click', () => {
-    selector.hamburgerMenu.classList.remove('active');
-    selector.navBar.classList.remove('active');
+    hamburgerMenu.classList.remove('active');
+    navBar.classList.remove('active');
   });
-}
+};
