@@ -1,5 +1,8 @@
 import Books from './modules/class.js';
-import { addBook, navList, navContact, navAddNew, hamburgerMenu, navLinks, dateTime, validationMessage, titleInput, authorInput } from './modules/selectors.js';
+import {
+  addBook, navList, navContact, navAddNew, hamburgerMenu, navLinks,
+  dateTime, validationMessage, titleInput, authorInput,
+} from './modules/selectors.js';
 import clear from './modules/clearmessage.js';
 import { navAddNewFunction, navListFunction, navContactFunction } from './modules/desktopnav.js';
 import { toggleFunction, removeFunction } from './modules/mobilenav.js';

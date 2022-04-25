@@ -241,7 +241,7 @@ footer {
 
   .hamburger.active .bar:nth-child(2) {
     opacity: 0;
-    }
+  }
 
   .hamburger.active .bar:nth-child(1) {
     transform: translateY(9px) rotate(45deg);
@@ -272,7 +272,7 @@ footer {
     width: 80%;
   }
 
-    .contact-info {
+  .contact-info {
     font-size: 15px;
   }
 
